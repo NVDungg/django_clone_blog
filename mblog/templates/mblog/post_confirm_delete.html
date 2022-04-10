@@ -1,0 +1,12 @@
+{% extends 'mblog/base.html' %}
+{% block title%}
+Delete
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <h4>Are you sure you want to delete {{ object }}</h4>
+        <input type="submit" class='btn btn-danger' value="Confirm">
+    </form>
+{% endblock %}

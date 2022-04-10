@@ -1,0 +1,18 @@
+{% extends 'mblog/base.html' %}
+{% block title%}
+Form
+{% endblock %}
+
+{% block content %}
+ <h1>Your Post</h1>
+ <div class='container'>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" class='btn btn-primary' value="Save">
+    </form>
+ </div>
+ 
+{% endblock %}
